@@ -28,69 +28,12 @@ This tool rewrites specific item IDs inside Riot item set JSON files to their SR
 
 The table shows champions detected for SR and what items were changed (Spanish + English).
 
-## Run (Python)
-
-Double-click / run without args to open the GUI:
-
-- `python update_riot_itemset_ids.py`
-
-CLI usage:
-
-- Dry-run (no writes):
-  - `python update_riot_itemset_ids.py --dry-run`
-- Apply changes:
-  - `python update_riot_itemset_ids.py`
-- If auto-detection fails:
-  - `python update_riot_itemset_ids.py --root "C:/Riot Games/League of Legends/Config/Champions"`
-
 ## Screenshots
 
-Add your images under [assets/](assets/) and reference them here.
+Main window:
 
-- Main window: `assets/gui-main.png`
-  - Example markdown: `![GUI main](assets/gui-main.png)`
-- Results table: `assets/gui-results.png`
-  - Example markdown: `![Results](assets/gui-results.png)`
+![GUI main](assets/gui-main.png)
 
-Tip: use `Win + Shift + S` to capture.
+Results table:
 
-## Demo video
-
-Recommended options:
-
-- GIF: export to `assets/demo.gif` and embed it:
-  - `![Demo](assets/demo.gif)`
-- MP4: upload `demo.mp4` to the Release assets and link it from here.
-
-## Build a standalone EXE (no Python required for users)
-
-On the machine that will build the EXE:
-
-1) Install Python 3.10+ (only needed for building)
-2) Install PyInstaller:
-
-- `pip install pyinstaller`
-
-3) Build a GUI EXE (recommended):
-
-- `pyinstaller --onefile --noconsole update_riot_itemset_ids.py`
-
-The executable will be created under `dist/update_riot_itemset_ids.exe`.
-
-Optional: build a console EXE (shows terminal output):
-
-- `pyinstaller --onefile --console update_riot_itemset_ids.py`
-
-## Safety
-
-- The tool writes JSON files under your League config folder.
-- Backups: when applying changes, it creates `*.json.bak` files next to modified files.
-
-## Notes
-
-- The embedded mapping currently includes the items you provided in your CSV.
-- If Riot changes IDs in future patches, the mapping may need updates.
-
-## Release template
-
-See [RELEASE_NOTES_v1.0.0.md](RELEASE_NOTES_v1.0.0.md) for a ready-to-paste first release description.
+![Results](assets/gui-results.png)
